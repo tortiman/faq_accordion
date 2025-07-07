@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const questions=document.querySelectorAll('.question');
     const icons=document.querySelectorAll('.icon');
     const answers=document.querySelectorAll('.answer');
+    let returnText=' ';
     const objTexts={
         0:"Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.",
         1:"Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.",
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         icon.addEventListener('click',function(){
             answers.forEach(answer => answer.textContent='');
             answers.forEach(answer => answer.style.paddingTop=0);
-            icons.forEach(icon => icon.style.content="url('../assets/images/icon-plus.svg")
+            icons.forEach(icon => icon.style.content="url('../assets/images/icon-plus.svg");
             icons[index].style.content="url('../assets/images/icon-minus.svg')";
             answers[index].style.paddingTop='1.50em';
             answers[index].textContent=text(index);    
@@ -26,13 +27,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         question.addEventListener('click',function(){
             const answerId=question.getAttribute('aria-controls');
             const answer=document.getElementById(answerId);
-            // const isExpanded=question.getAttribute('aria-expanded')=== 'true';
             answer.focus();
         });
     });
     
     function text(id) {
-        returnText='';
+        
         if (id === 0) {
             returnText=objTexts[0];
         }else if(id === 1) {
