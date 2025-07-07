@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
+    const questions=document.querySelectorAll('.question');
     const icons=document.querySelectorAll('.icon');
     const answers=document.querySelectorAll('.answer');
-
+    const objTexts={
+        0:"Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.",
+        1:"Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.",
+        2:"Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!",
+        3:"The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members."
+    }
     icons.forEach((icon,index) =>{
         icon.addEventListener('click',function(){
             answers.forEach(answer => answer.textContent='');
@@ -16,18 +22,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
             
         });
-    
+    questions.forEach((question) => {
+        question.addEventListener('click',function(){
+            const answerId=question.getAttribute('aria-controls');
+            const answer=document.getElementById(answerId);
+            // const isExpanded=question.getAttribute('aria-expanded')=== 'true';
+            answer.focus();
+        });
+    });
     
     function text(id) {
         returnText='';
         if (id === 0) {
-            returnText= "Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.";
+            returnText=objTexts[0];
         }else if(id === 1) {
-            returnText="Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.";
+            returnText=objTexts[1];
         }else if(id === 2){
-            returnText="Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!";
+            returnText=objTexts[2];
         }else {
-            returnText="The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.";
+            returnText=objTexts[3];
         }
         
         return returnText;

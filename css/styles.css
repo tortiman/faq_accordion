@@ -70,27 +70,28 @@ header .star{
 }
 
 header .head{
-    font-size: 1.875em;
+    font-size: 3.125em;
     font-weight: 700;
 }
 
+header .head:focus{
+    outline: 2px solid var(--Purple950);
+}
 
-
-section{
+.section{
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--Purple100);
-    /* gap: 1.86em; */
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
-    
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;    
 }
 
-section:last-child{
+
+nav .section:last-child{
     border-bottom: none;
 }
 
-section .question-icon{
+.section .question-icon{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -99,9 +100,13 @@ section .question-icon{
 }
 
 .question{
-    width: 15.63em;
-    font-size: 1.02em;
+    font-size: 1em;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.question:focus{
+    outline: 2px solid var(--Purple950);
 }
 
 .icon{
@@ -109,14 +114,56 @@ section .question-icon{
     cursor: pointer;
 }
 
+.icon:focus{
+    outline: 2px solid var(--Purple950);
+}
+
 .answer{
     font-size: .9em;
     font-weight: 400;
     line-height: 1.5;
     color: var(--Purple600);
-    
+    cursor: pointer;
 }
 
-section .answer.hid{
-    visibility: hidden;
+
+
+
+/* --- RESPONSIVE DESIGN ---*/
+
+@media (min-width:48em){
+    .backgroundScreen{
+        width: 90em;
+
+    }
+
+    .pattern{
+        content: url('../assets/images/background-pattern-desktop.svg');
+        object-fit: cover;
+    }
+
+    .colorBack{
+        width: 90em;
+    }
+
+    main{
+        height: 35em;
+        width: 37.5em;
+    }
+
+    article{
+        padding: 3.43em 2.81em 2.81em 2.5em;
+    }
+
+    .section .question-icon{
+        gap: 0;
+    }
+
+    nav{
+        padding-top: 1.31em;
+    }
+
+    .answer{
+        font-size: 1em; 
+    }
 }

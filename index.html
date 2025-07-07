@@ -22,44 +22,92 @@
     <main>
       <article>
         <header>
-          <img src="./assets/images/icon-star.svg" alt="" class="star" />
-          <h1 class="head">FAQs</h1>
+          <img src="./assets/images/icon-star.svg" alt="star" class="star" />
+          <h1 class="head" tabindex="1" role="button" aria-label="Faqs">
+            FAQs
+          </h1>
         </header>
         <nav>
-          <section>
+          <div class="section">
             <div class="question-icon">
-              <p class="question">
+              <p
+                id="question1"
+                aria-expanded="false"
+                aria-controls="answer1"
+                class="question"
+                tabindex="2"
+                role="button"
+                aria-label="What is Frontend Mentor, and how will it help me?"
+              >
                 What is Frontend Mentor, and how will it help me?
               </p>
-              <div class="icon"></div>
+              <div class="icon" tabindex="3"></div>
             </div>
-            <p class="answer"></p>
-          </section>
-          <section>
+            <p id="answer1" class="answer" tabindex="10" aria-live="polite"></p>
+          </div>
+          <div class="section">
             <div class="question-icon">
-              <p class="question">Is Frontend Mentor free?</p>
-              <div class="icon"></div>
+              <p
+                id="question2"
+                aria-expanded="false"
+                aria-controls="answer2"
+                class="question"
+                tabindex="4"
+                role="button"
+                aria-label="Is Frontend Mentor free?"
+              >
+                Is Frontend Mentor free?
+              </p>
+              <div
+                aria-label="Expand or collapse answer"
+                class="icon"
+                tabindex="5"
+              ></div>
             </div>
-            <p class="answer"></p>
-          </section>
-          <section>
+            <p id="answer2" class="answer" tabindex="11" aria-live="polite"></p>
+          </div>
+          <div class="section">
             <div class="question-icon">
-              <p class="question">
+              <p
+                id="question3"
+                aria-expanded="false"
+                aria-controls="answer3"
+                class="question"
+                tabindex="6"
+                role="button"
+                aria-label="Can I use Frontend Mentor projects in my portfolio?"
+              >
                 Can I use Frontend Mentor projects in my portfolio?
               </p>
-              <div class="icon"></div>
+              <div
+                aria-label="Expand or collapse answer"
+                class="icon"
+                tabindex="7"
+              ></div>
             </div>
-            <p class="answer"></p>
-          </section>
-          <section>
-            <div class="question-icon">
-              <p class="question">
-                How can I get help if I'm stuck on a Frontend Mentor challenge?
+            <p id="answer3" class="answer" tabindex="12" aria-live="polite"></p>
+          </div>
+          <div class="section">
+            <div aria-label="Expand or collapse answer" class="question-icon">
+              <p
+                id="question4"
+                aria-expanded="false"
+                aria-controls="answer4"
+                class="question"
+                tabindex="8"
+                role="button"
+                aria-label="How can I get help if I'm stuck on a challenge?"
+              >
+                How can I get help if I'm stuck on a challenge?
               </p>
-              <div class="icon"></div>
+              <div
+                aria-label="Expand or collapse answer"
+                class="icon"
+                tabindex="9"
+              ></div>
             </div>
-            <p class="answer"></p>
-          </section>
+            <p id="answer4" class="answer" tabindex="13" aria-live="polite"></p>
+          </div>
         </nav>
       </article>
     </main>
